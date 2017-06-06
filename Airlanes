@@ -1,0 +1,43 @@
+  class Airlanes
+    {
+        public int capacity = 0;
+        public double worth;
+        public string name;
+        private List<Plane> allplane = new List<Plane>();
+        public List<Plane> Allplane
+        {
+            get
+            {
+                return allplane;
+            }
+        }
+        public int Capacity
+        {
+            get
+            {
+                int n = 0;
+                Boeing sp3 = new Boeing();
+                Aerobus sp4 = new Aerobus();
+                for (int i = 0; i < this.Allplane.Count(); i++)
+                {
+
+                    if (this.Allplane[i].GetType() == sp4.GetType())
+                    {
+                        Boeing b = (Boeing)(this.Allplane[i]);
+                        n += b.Capacity;
+                    }
+                    if (this.Allplane[i].GetType() == sp3.GetType())
+                    {
+                        Aerobus b = (Aerobus)(this.Allplane[i]);
+                        n += b.Capacity;
+                    }
+                }
+                return n;
+            }
+            set
+            {
+                capacity += value;
+            }
+        }
+
+    }
