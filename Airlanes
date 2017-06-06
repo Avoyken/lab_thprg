@@ -21,12 +21,12 @@
                 for (int i = 0; i < this.Allplane.Count(); i++)
                 {
 
-                    if (this.Allplane[i].GetType() == sp4.GetType())
+                    if (this.Allplane[i].GetType() == sp3.GetType())
                     {
                         Boeing b = (Boeing)(this.Allplane[i]);
                         n += b.Capacity;
                     }
-                    if (this.Allplane[i].GetType() == sp3.GetType())
+                    if (this.Allplane[i].GetType() == sp4.GetType())
                     {
                         Aerobus b = (Aerobus)(this.Allplane[i]);
                         n += b.Capacity;
